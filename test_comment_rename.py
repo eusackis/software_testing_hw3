@@ -1,5 +1,6 @@
 import unittest
-from Comment import Comment, comment_validator  
+import comment_validator
+from Comment_class import Comment  
 
 class TestCommentValidator(unittest.TestCase):
 
@@ -36,7 +37,7 @@ class TestCommentValidator(unittest.TestCase):
                 self.assertIn("Comment contains prohibited characters", str(context.exception))
 
     def test_rating_not_integer(self):
-        comment = Comment(text="Valid text", rating="five")
+        comment = Comment(text="Valid text", rating=5.67)
         with self.assertRaises(TypeError) as context:
             comment_validator(comment)
         self.assertIn("Expected rating to be int", str(context.exception))

@@ -1,9 +1,5 @@
 import re
-
-class Comment:
-    def __init__(self, text: str = None, rating: int = None):
-        self.text = text
-        self.rating = rating
+from Comment_class import Comment
 
 def comment_validator(comment: Comment):
     if type(comment.text) is not str:
@@ -22,4 +18,3 @@ def comment_validator(comment: Comment):
         raise ValueError(f"Comment rating must range from 1 to 10, got {comment.rating} instead.")
 
     return {'rating': comment.rating, 'comment': comment.text}
-
