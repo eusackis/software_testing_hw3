@@ -16,7 +16,7 @@ name = \"local\"" > cosmic-ray.toml
 
 then ran the following commands: 
 
-cosmic-ray init cosmic-ray.toml session.json\n
-cosmic-ray exec cosmic-ray.toml session.json\n
-cr-report session.json > report.txt\n
+cosmic-ray init cosmic-ray.toml session.json
+cosmic-ray exec cosmic-ray.toml session.json
+cr-report session.json > report.txt
 cat report.txt
