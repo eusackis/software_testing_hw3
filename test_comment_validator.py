@@ -1,5 +1,5 @@
 import unittest
-import comment_validator
+from comment_validator import comment_validator
 from Comment_class import Comment  
 
 class TestCommentValidator(unittest.TestCase):
